@@ -1,0 +1,77 @@
+.homeInfo {
+  width: 100%;
+}
+.homeInfo__brand {
+  width: 100%;
+  height: 15vh;
+}
+.homeInfo__container {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+}
+.homeInfo__image > img {
+  width: 700px;
+}
+.homeInfo__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 10%;
+}
+.homeInfo__text {
+  color: var(--primary-color);
+  position: absolute;
+  right: 8%;
+  text-align: justify;
+}
+.homeInfo__text > h1 {
+  font-size: 8vw;
+}
+.homeInfo__text > span {
+  font-size: 7vw;
+  font-weight: 300;
+}
+.homeInfo__text > h4 {
+  font-size: 3.4vw;
+  font-weight: 100;
+}
+.homeInfo__link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.homeInfo__link:hover {
+  text-decoration: none;
+}
+.homeInfo__link > button {
+  padding: 5px 20px;
+  width: 200px;
+  border: 1.5px solid var(--primary-color);
+  background: none;
+  border-radius: 14px;
+  font-weight: 500;
+
+  background: linear-gradient(to right, white 50%, var(--primary-color) 50%) left;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+}
+.homeInfo__link > button:hover {
+  color: white;
+  background-position: right;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+/* End of responsive */

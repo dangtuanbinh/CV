@@ -1,0 +1,27 @@
+.homeNavigation {
+  height: 85vh;
+  background: white;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.homeNavigation__navbar {
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  padding: 0 !important;
+}
+.homeNavigation__link{
+    margin-bottom: 20px;
+}
+.homeNavigation__link:hover{
+    text-decoration: none;
+}
+.homeNavigation__link > .MuiSvgIcon-root{
+    font-size: 2.3rem;
+    color: var(--lightGrey-color);
+}
+.activeLink > .MuiSvgIcon-root{
+    color: var(--primary-color);
+}

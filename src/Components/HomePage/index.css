@@ -1,0 +1,12 @@
+.homePage{
+    width: 100%;
+    display: flex;
+    padding:0 35px;
+}
+
+.homePage__info{
+    flex: 0.8;
+}
+.homePage__navigation{
+    flex: 0.2;
+}
