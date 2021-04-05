@@ -1,12 +1,23 @@
 .homePage{
     width: 100%;
-    display: flex;
-    padding:0 35px;
+    padding:0px 35px;
 }
 
-.homePage__info{
-    flex: 0.8;
+/* Responsive */
+@media screen and (max-width: 1200px) {
 }
-.homePage__navigation{
-    flex: 0.2;
+
+@media screen and (max-width: 1024px) {
+ 
 }
+
+@media screen and (max-width: 768px) {
+    .homePage{
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+/* End of responsive */

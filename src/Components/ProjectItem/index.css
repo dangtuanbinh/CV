@@ -1,0 +1,30 @@
+.projectItem > img{
+    width: 250px;
+}
+.projectItem__image{
+    height: 250px;
+    width: 350px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 25px;
+    border-radius: 20px;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .projectItem__image{
+        margin: 25px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+/* End of responsive */

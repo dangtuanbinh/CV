@@ -25,7 +25,16 @@
 }
 
 @media screen and (max-width: 768px) {
-   
+    .homeIcon__container{
+        flex-direction: column;
+    }
+    .homeIcon__link{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .homeIcon__link > .MuiSvgIcon-root{
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (max-width: 576px) {

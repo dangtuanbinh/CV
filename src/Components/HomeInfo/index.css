@@ -1,5 +1,6 @@
 .homeInfo {
   width: 100%;
+  padding-top: 30px;
 }
 .homeInfo__brand {
   width: 100%;
@@ -24,18 +25,18 @@
 .homeInfo__text {
   color: var(--primary-color);
   position: absolute;
-  right: 8%;
+  right: 16%;
   text-align: justify;
 }
 .homeInfo__text > h1 {
-  font-size: 8vw;
+  font-size: 7vw;
 }
 .homeInfo__text > span {
-  font-size: 7vw;
+  font-size: 6vw;
   font-weight: 300;
 }
 .homeInfo__text > h4 {
-  font-size: 3.4vw;
+  font-size: 3vw;
   font-weight: 100;
 }
 .homeInfo__link {
@@ -62,6 +63,12 @@
   color: white;
   background-position: right;
 }
+.homeInfo__image > img{
+  width: 800px;
+}
+.homeInfo__sideIcon{
+  display: none;
+}
 /* Responsive */
 @media screen and (max-width: 1200px) {
 }
@@ -70,6 +77,56 @@
 }
 
 @media screen and (max-width: 768px) {
+  .homeInfo__sideIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .homeInfo__bottomIcon{
+    display: none;
+  }
+  .homeInfo__container{
+    height: 84vh;
+    align-items:unset;
+  }
+  .homeInfo__content {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding:0;
+  }
+  .homeInfo__image > img{
+    width: 360px;
+  }
+  .homeInfo__text {
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 24px;
+  }
+  .homeInfo__brand {
+    height: 5vh;
+  }
+  .homeInfo__text{
+    width: 100%;
+  }
+  .homeInfo__link{
+    display: none;
+  }
+  .homeInfo__text > h1 {
+    font-size: 58px;
+  }
+  .homeInfo__text > span {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  .homeInfo__text > h4 {
+    font-size: 24px;
+    font-weight: 100;
+  }
+  
 }
 
 @media screen and (max-width: 576px) {

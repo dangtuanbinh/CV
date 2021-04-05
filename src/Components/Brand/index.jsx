@@ -2,7 +2,7 @@ import { Box } from "@material-ui/core";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
-import "./index.css"
+import "./index.css";
 
 const Brand = () => {
   return (
@@ -10,7 +10,7 @@ const Brand = () => {
       <Box className="brand">
         <NavLink to="/" className="brand__link">
           <BlurOnIcon />
-          <span>RobinDang</span>
+          <span>ROBINDANG</span>
         </NavLink>
       </Box>
     </>

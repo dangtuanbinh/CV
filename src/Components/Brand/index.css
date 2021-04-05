@@ -1,6 +1,4 @@
-.brand{
-    padding-top: 30px;
-}
+
 .brand__link{
     display: flex;
     align-items: center;
@@ -19,3 +17,36 @@
     margin-left: 10px;
     font-weight: 600;
 }
+.brand__nav{
+    display: none;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+   .brand{
+       padding-top: 5px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .brand__link > .MuiSvgIcon-root{
+       font-size: 3rem;
+   }
+   .brand__link > span {
+       font-size: 18px;
+   }
+   .brand__nav{
+       display: block;
+   }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+/* End of responsive */

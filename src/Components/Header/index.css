@@ -1,0 +1,73 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+.header__drawer__link{
+    display: flex;
+    align-items: center;
+}
+.header__drawer__link > .MuiSvgIcon-root{
+    color: var(--lightGrey-color);
+    font-size: 2rem;
+    margin-right: 20px;
+}
+.header__drawer__link > h3{
+    font-size: 20px;
+    color: var(--lightGrey-color);
+}
+.header__navigation{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header__drawer{
+    display: none;
+}
+.MuiList-root{
+    margin-top: 50px;
+}
+.header__drawer > .MuiSvgIcon-root{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+.header__nav__link > .MuiSvgIcon-root{
+    font-size: 2.3rem;
+    color: var(--lightGrey-color);
+    margin-bottom: 20px;
+}
+.activeLink > .MuiSvgIcon-root, .activeLink > h3{
+    color: var(--primary-color);
+}
+.header__nav{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+   .header__drawer{
+       display: block;
+   }
+   .header__nav{
+       display: none;
+   }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+/* End of responsive */
