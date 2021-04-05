@@ -1,11 +1,6 @@
 import { Box } from "@material-ui/core";
 import React, { useState } from "react";
 import "./index.css";
-import social from "../../Assets/Images/social.jpg";
-import course from "../../Assets/Images/course.jpg";
-import clothe from "../../Assets/Images/clothe.jpg";
-import management from "../../Assets/Images/management.jpg";
-import uber from "../../Assets/Images/uber.jpg";
 import ProjectItem from "../ProjectItem";
 
 const ProjectPage = () => {

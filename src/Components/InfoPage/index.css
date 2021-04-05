@@ -1,0 +1,167 @@
+.infoPage{
+    height: 85vh;
+    width: 90vw;
+}
+.infoPage__container{
+    display: flex;
+}
+.infoPage__right{
+    flex: 0.7;
+}
+.infoPage__right__container{
+    display: flex;
+    justify-content: space-around;
+}
+.infoPage__right__detail::-webkit-scrollbar{
+    display: none;
+}
+.infoPage__right__detail{
+    padding-left: 15px ;
+    overflow-y: scroll;
+    height: 80vh;
+}
+.infoPage__right__item{
+    width: 200px;
+    display: flex;
+    padding-left:40px;
+    position: relative;
+    border-left: 1px solid var(--primary-color);
+    margin: 30px 0;
+}
+.infoPage__right__item--icon{
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    border-radius: 999px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -8%;
+}
+.infoPage__right__item--icon > .MuiSvgIcon-root{
+    color: white; 
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.infoPage__right__item--text > p{
+    font-size: 13px;
+    background: rgb(238, 238, 238);
+    width: 115px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: 700;
+    color: var(--grey-color);
+    
+}
+.infoPage__right__item--text > h6 {
+    font-size: 15px;
+    color: var(--primary-color);
+}
+.infoPage__right__item--text > h6 > span{
+    font-size: 13px;
+    color: var(--lightGrey-color);
+    font-weight: 700;
+}
+.infoPage__right__item--text > span {
+    font-size: 14px;
+}
+.infoPage__education__button{
+    font-size: 14px;
+    padding: 2px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.infoPage__left{
+    flex: 0.3;
+    height: 85vh;
+}
+
+.infoPage__left__imgContainer{
+    display: flex;
+    justify-content: center;
+}
+.infoPage__left__profilePic{
+    width: 200px;
+    height: 200px;
+    border-radius: 999px;
+    background: url("https://res.cloudinary.com/dufh7rv0n/image/upload/v1617636365/profile_y5gpt6.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px 0;
+}
+.infoPage__left__container{
+    display: flex;
+    flex-direction: column;
+}
+.infoPage__left__text{
+    display: flex;
+    justify-content: space-between;
+}
+.infoPage__text__item{
+    margin-bottom: 15px;
+}
+.infoPage__text__item > h5{
+    font-size: 15px;
+    color: var(--grey-color);
+}
+.infoPage__text__item > span{
+    font-weight: 500;
+}
+.infoPage__left > button{
+    width: 200px;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.infoPage__icon{
+    margin-top: 20px;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .infoPage{
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+   .infoPage__container{
+       flex-direction: column-reverse;
+   }
+   .infoPage__right__container{
+       flex-direction: column;
+   }
+   .infoPage__right__detail{
+       height: 100%;
+       overflow-y: unset;
+   }
+   .infoPage__right__item{
+       width: 100%;
+   }
+   .infoPage__right__item--icon{
+       left: -2.5%;
+   }
+   .infoPage__experience, .infoPage__education{
+       border-top: 0.5px solid rgb(218, 218, 218);
+       padding-top: 30px;
+   }
+}
+
+@media screen and (max-width: 576px) {
+    .infoPage__right__item--icon{
+        left: -4.9%;
+    }
+}
+/* End of responsive */
