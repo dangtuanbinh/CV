@@ -1,6 +1,5 @@
 .projectPage{
-    width: 100%;
-    height: 85vh;
+    height: 87vh;
     width: 90vw;
     display: flex;
     align-items: center;
@@ -18,6 +17,12 @@
     justify-content: center;
     margin-top: 20px;
 }
+.projectPage__button > .MuiSvgIcon-root{
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0 10px;
+    cursor: pointer;
+}
 
 /* Responsive */
 @media screen and (max-width: 1200px) {
@@ -30,7 +35,7 @@
 @media screen and (max-width: 768px) {
     .projectPage__container{
         padding: 0;
-        width: 100vw;
+        margin-top: 100px;
     }
     .projectPage{
         width: 100vw;

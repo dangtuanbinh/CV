@@ -2,6 +2,7 @@ import { Box } from "@material-ui/core";
 import React, { useEffect, useRef } from "react";
 import "./index.css";
 import { useHistory } from "react-router-dom";
+import Badge from "@material-ui/core/Badge";
 
 const useTilt = (active) => {
   const ref = useRef(null);
@@ -17,7 +18,11 @@ const useTilt = (active) => {
     const resizeObserver = new ResizeObserver((entries) => {
       state.rect = ref.current.getBoundingClientRect();
     });
-    const handleMouseMove = e => {
+    let el = ref.current;
+    const handleMouseMove = (e) => {
+      if (!el) {
+        return;
+      }
       state.mouseX = e.clinetX;
       state.mouseY = e.clientY;
       const px = (state.mouseX - state.rect.left) / state.rect.width;
@@ -48,16 +53,25 @@ const ProjectItem = (props) => {
     <>
       <Box
         className="projectItem"
+        data-active={active}
         style={{
           "--offset": props.offset,
           "--dir": props.offset === 0 ? 0 : props.offset > 0 ? 2 : -2,
-          backgroundImage: `url(${props.project.image})`
         }}
         // ref={active ? ref : null}
-        data-active={active}
-        onClick={gotoDetail}
       >
-        
+        <Box
+          className="projectItem__image"
+          onClick={gotoDetail}
+          style={{ backgroundImage: `url(${props.project.image})` }}
+        ></Box>
+        <Box className="projectItem__text">
+          <Badge badgeContent={props.project.type} color="secondary">
+            <h5>{props.project.name}</h5>
+          </Badge>
+
+          <p>-{props.project.description}</p>
+        </Box>
       </Box>
     </>
   );

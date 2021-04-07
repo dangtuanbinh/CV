@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./index.css";
 import ProjectItem from "../ProjectItem";
 import { useSelector } from "react-redux";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const ProjectPage = () => {
   const projectList = useSelector((state) => {
@@ -21,14 +23,13 @@ const ProjectPage = () => {
     <>
       <Box className="projectPage">
         <Box className="projectPage__container">
-          {projectList.map((project, index) => {
-            let offset = (projectIndex - index) % Math.round(projectList.length/2)
+          {[...projectList, ...projectList, ...projectList].map((project, index) => {
+            let offset = projectList.length + (projectIndex - index);
             return <ProjectItem project={project} key={index} offset={offset}/>;
           })}
           <Box className="projectPage__button">
-            <h5>{projectIndex}</h5>
-            <button onClick={previous}>Previous</button>
-            <button onClick={next}>Next</button>
+            <ArrowBackIosIcon  onClick={previous}/>
+            <ArrowForwardIosIcon  onClick={next} />
           </Box>
         </Box>
       </Box>
