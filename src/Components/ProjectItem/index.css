@@ -1,31 +1,43 @@
-.projectItem > img{
-    width: 250px;
+.projectItem {
+  grid-area: 1/-1;
+  --x: calc(var(--px) -0.5);
+  transform: translateX(calc(100% * var(--offset)))
+    rotateY(calc(-25deg * var(--dir)));
+  transition: transform 0.5s ease-in-out;
+  height: 380px;
+  width: 300px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 50px;
 }
-.projectItem__image{
-    height: 250px;
-    width: 350px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 25px;
-    border-radius: 20px;
-    cursor: pointer;
+.projectItem[data-active]{
+ --x: calc(var(--px) - .5);
+ --y: calc(var(--py) - .5);
+ transform: translateZ(100px);
+ transition: 0.8s ease-in-out;
 }
+.projectItem[data-active]:hover{
+    transition-duration: 0.2s;
+    transform: rotateY(--x * 45deg)
+    rotateX(--y * -45deg);
+}
+
 /* Responsive */
 @media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 1024px) {
- 
 }
 
 @media screen and (max-width: 768px) {
-    .projectItem__image{
-        margin: 25px 0 0 0;
-    }
+  .projectItem{
+    margin:0;
+  }
 }
 
 @media screen and (max-width: 576px) {
-
 }
 /* End of responsive */
