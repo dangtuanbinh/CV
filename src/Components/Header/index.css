@@ -37,6 +37,10 @@
     font-size: 2.3rem;
     color: var(--lightGrey-color);
     margin-bottom: 20px;
+    transition: 0.4s ease-in-out;
+}
+.header__nav__link > .MuiSvgIcon-root:hover{
+    color: var(--primary-color);
 }
 .activeLink > .MuiSvgIcon-root, .activeLink > h3{
     color: var(--primary-color);

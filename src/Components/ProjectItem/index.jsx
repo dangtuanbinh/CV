@@ -56,7 +56,7 @@ const ProjectItem = (props) => {
         data-active={active}
         style={{
           "--offset": props.offset,
-          "--dir": props.offset === 0 ? 0 : props.offset > 0 ? 2 : -2,
+          "--dir": props.offset === 0 ? 0 : props.offset > 0 ? 1 : -1,
         }}
         // ref={active ? ref : null}
       >

@@ -83,16 +83,6 @@ const Header = (anchor) => {
           <NavLink
             activeClassName="activeLink"
             className="header__drawer__link"
-            to="/Skill"
-          >
-            <AppsIcon />
-            <h3>Skills</h3>
-          </NavLink>
-        </ListItem>
-        <ListItem button>
-          <NavLink
-            activeClassName="activeLink"
-            className="header__drawer__link"
             to="/Contact"
           >
             <ContactlessIcon />
@@ -146,13 +136,6 @@ const Header = (anchor) => {
                 <AccountCircleIcon />
               </NavLink>
 
-              <NavLink
-                activeClassName="activeLink"
-                to="/Skill"
-                className="header__nav__link"
-              >
-                <AppsIcon />
-              </NavLink>
               <NavLink
                 activeClassName="activeLink"
                 to="/Contact"

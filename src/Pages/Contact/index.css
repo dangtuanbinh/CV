@@ -1,0 +1,22 @@
+.contact{
+    padding: 0 35px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .contact{
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+/* End of responsive */
