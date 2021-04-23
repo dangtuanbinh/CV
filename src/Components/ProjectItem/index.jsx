@@ -1,54 +1,19 @@
 import { Box } from "@material-ui/core";
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "./index.css";
 import { useHistory } from "react-router-dom";
 import Badge from "@material-ui/core/Badge";
-
-const useTilt = (active) => {
-  const ref = useRef(null);
-  useEffect(() => {
-    if (!ref.current || !active) {
-      return;
-    }
-    const state = {
-      rect: ref.current.getBoundingClientRect(),
-      mouseX: undefined,
-      mouseY: undefined,
-    };
-    const resizeObserver = new ResizeObserver((entries) => {
-      state.rect = ref.current.getBoundingClientRect();
-    });
-    let el = ref.current;
-    const handleMouseMove = (e) => {
-      if (!el) {
-        return;
-      }
-      state.mouseX = e.clinetX;
-      state.mouseY = e.clientY;
-      const px = (state.mouseX - state.rect.left) / state.rect.width;
-      const py = (state.mouseY - state.rect.top) / state.rect.heihgt;
-      ref.current.style.setProperty("--px", px);
-      ref.current.style.setProperty("--py", py);
-    };
-    ref.current.addEventListener("mousemove", handleMouseMove);
-    resizeObserver.observe(ref.current);
-    return () => {
-      resizeObserver.unobserve(ref.current);
-      ref.current.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [ref, active]);
-  return ref;
-};
+import ProjectModal from "../ProjectModal/index";
 
 const ProjectItem = (props) => {
   const history = useHistory();
-  const gotoDetail = () => {
-    if (props.project.id) {
-      history.push(`/Detail/${props.project.id}`);
-    }
-  };
+  const [modalShow, setModalShow] = useState(false);
+  
+
+   
   const active = props.offset === 0 ? true : null;
   // const ref = useTilt(active);
+
   return (
     <>
       <Box
@@ -61,8 +26,8 @@ const ProjectItem = (props) => {
         // ref={active ? ref : null}
       >
         <Box
+          onClick={() => setModalShow(true)}
           className="projectItem__image"
-          onClick={gotoDetail}
           style={{ backgroundImage: `url(${props.project.image})` }}
         ></Box>
         <Box className="projectItem__text">
@@ -72,6 +37,7 @@ const ProjectItem = (props) => {
 
           <p>-{props.project.description}</p>
         </Box>
+        <ProjectModal nextMove={props.next} projectItem={props} show={modalShow} onHide={() => setModalShow(false)} />
       </Box>
     </>
   );

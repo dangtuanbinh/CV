@@ -4,6 +4,7 @@ import "./index.css";
 import background from "../../Assets/Images/background2.png";
 import HomeIcon from "../HomeIcon";
 import { NavLink } from "react-router-dom";
+import { Animated } from "react-animated-css";
 
 const HomeInfo = () => {
   return (

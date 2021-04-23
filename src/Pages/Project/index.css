@@ -16,6 +16,8 @@
 }
 
 @media screen and (max-width: 576px) {
-
+.project{
+    height: 87vh;
+}
 }
 /* End of responsive */

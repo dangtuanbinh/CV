@@ -6,11 +6,11 @@ import ViewListIcon from "@material-ui/icons/ViewList";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
-import AppsIcon from "@material-ui/icons/Apps";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ContactlessIcon from "@material-ui/icons/Contactless";
 import HomeIcon from "@material-ui/icons/Home";
+import { Animated } from "react-animated-css";
 
 const useStyles = makeStyles({
   list: {
@@ -92,15 +92,22 @@ const Header = (anchor) => {
       </List>
     </div>
   );
+
   return (
     <>
       <Box className="header">
-        <Box className="header__brand">
-          <Brand />
-        </Box>
+        <Animated animationIn="slideInDown" animationInDuration="1300">
+          <div className="header__brand">
+            <Brand />
+          </div>
+        </Animated>
+
         <Box className="header__navigation">
           <Box className="header__drawer">
-            <ViewListIcon onClick={toggleDrawer(anchor, true)} />
+            <Animated animationIn="slideInDown" animationInDuration="1000">
+              <ViewListIcon onClick={toggleDrawer(anchor, true)} />
+            </Animated>
+
             <SwipeableDrawer
               anchor="right"
               open={state[anchor]}
@@ -113,36 +120,45 @@ const Header = (anchor) => {
 
           <Box className="header__nav">
             <Box className="header__nav__container">
-              <NavLink
-                exact
-                activeClassName="activeLink"
-                to="/"
-                className="header__nav__link"
-              >
-                <HomeIcon />
-              </NavLink>
-              <NavLink
-                activeClassName="activeLink"
-                to="/Project"
-                className="header__nav__link"
-              >
-                <AccountTreeIcon />
-              </NavLink>
-              <NavLink
-                activeClassName="activeLink"
-                to="/Info"
-                className="header__nav__link"
-              >
-                <AccountCircleIcon />
-              </NavLink>
+              <Animated animationIn="slideInRight" animationInDuration="1300">
+                <NavLink
+                  exact
+                  activeClassName="activeLink"
+                  to="/"
+                  className="header__nav__link"
+                >
+                  <HomeIcon />
+                </NavLink>
+              </Animated>
 
-              <NavLink
-                activeClassName="activeLink"
-                to="/Contact"
-                className="header__nav__link"
-              >
-                <ContactlessIcon />
-              </NavLink>
+              <Animated animationIn="slideInRight" animationInDuration="1700" animationInDelay="2">
+                <NavLink
+                  activeClassName="activeLink"
+                  to="/Project"
+                  className="header__nav__link"
+                >
+                  <AccountTreeIcon />
+                </NavLink>
+              </Animated>
+              <Animated animationIn="slideInRight" animationInDuration="2100">
+                <NavLink
+                  activeClassName="activeLink"
+                  to="/Info"
+                  className="header__nav__link"
+                >
+                  <AccountCircleIcon />
+                </NavLink>
+              </Animated>
+
+              <Animated animationIn="slideInRight" animationInDuration="2500">
+                <NavLink
+                  activeClassName="activeLink"
+                  to="/Contact"
+                  className="header__nav__link"
+                >
+                  <ContactlessIcon />
+                </NavLink>
+              </Animated>
             </Box>
           </Box>
         </Box>

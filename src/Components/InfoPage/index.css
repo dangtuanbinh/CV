@@ -241,6 +241,12 @@
   .infoPage__content__text{
       width: 100%;
   }
+  .infoPage__link > .MuiSvgIcon-root{
+    color: var(--primary-color);
+  }
+  .infoPage__icon{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {

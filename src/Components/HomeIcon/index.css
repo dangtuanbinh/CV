@@ -27,6 +27,8 @@
 @media screen and (max-width: 768px) {
     .homeIcon__container{
         flex-direction: column;
+        height: 100%;
+        justify-content: center;
     }
     .homeIcon__link{
         margin-right: 0;

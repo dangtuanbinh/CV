@@ -1,5 +1,5 @@
 import { Box } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import ProjectItem from "../ProjectItem";
 import { useSelector } from "react-redux";
@@ -25,7 +25,7 @@ const ProjectPage = () => {
         <Box className="projectPage__container">
           {[...projectList, ...projectList, ...projectList].map((project, index) => {
             let offset = projectList.length + (projectIndex - index);
-            return <ProjectItem project={project} key={index} offset={offset}/>;
+            return <ProjectItem next={next} project={project} key={index} offset={offset}/>;
           })}
           <Box className="projectPage__button">
             <ArrowBackIosIcon  onClick={previous}/>

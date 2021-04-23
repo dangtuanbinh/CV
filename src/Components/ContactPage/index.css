@@ -150,7 +150,8 @@
 
 @media screen and (max-width: 576px) {
   .contactPage {
-    height: 70vh;
+    height: 100%;
+    width: 100%;
   }
   .contactPage__top {
     display: none;
