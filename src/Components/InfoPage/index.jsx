@@ -15,6 +15,7 @@ import html from "../../Assets/Images/html.svg";
 import css from "../../Assets/Images/css.svg";
 import js from "../../Assets/Images/js.svg";
 import react from "../../Assets/Images/react.svg";
+import { Link } from "react-router-dom";
 
 const InfoPage = () => {
   return (
@@ -186,10 +187,15 @@ const InfoPage = () => {
                 </Box>
 
                 <Box className="infoPage__content__footer">
-                  <Box className="infoPage__footer__text">
+                  <Link
+                    to="/files/CVnew.pdf"
+                    target="_blank"
+                    download
+                    className="infoPage__footer__text"
+                  >
                     <span>DOWNLOAD CV</span>
                     <GetAppIcon />
-                  </Box>
+                  </Link>
 
                   <Box className="infoPage__icon">
                     <a

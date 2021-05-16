@@ -2,6 +2,7 @@ import { Box } from "@material-ui/core";
 import React from "react";
 import "./index.css";
 import background from "../../Assets/Images/background2.png";
+import profilePic from "../../Assets/Images/profilePic.png";
 import HomeIcon from "../HomeIcon";
 import { NavLink } from "react-router-dom";
 import { Animated } from "react-animated-css";
@@ -25,6 +26,9 @@ const HomeInfo = () => {
             </Box>
             <Box className="homeInfo__image">
               <img src={background} alt="profile" />
+              <Box className="homeInfo__image__profilePic">
+                <img src={profilePic} alt="profilePic" />
+              </Box>
             </Box>
           </Box>
         </Box>

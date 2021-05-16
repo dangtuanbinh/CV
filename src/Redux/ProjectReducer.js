@@ -25,7 +25,7 @@ const initialState = {
     status: "Completed",
     technique: "HTML5, CSS3, Javscript, Reactjs",
     addition: "Redux, React-Boostrap, Material UI, Firebase Deploy Service",
-    webLink: "https://mellow-83a7f.web.app",
+    webLink: "https://dressing-room-75ad4.web.app",
     type:"Basic"
   },
   
@@ -40,7 +40,7 @@ const initialState = {
     status: "Complete",
     technique: "HTML5, CSS3, Javscript",
     addition: "Bootstrap, Firebase Deploy Service",
-    webLink: "https://mellow-83a7f.web.app",
+    webLink: "https://emloyeemanager.netlify.app",
     type:"Basic"
   },
   {
@@ -49,12 +49,12 @@ const initialState = {
     description: "An app allows user to calculate Uber cost",
     role: "Frontend Developer",
     image:
-      "https://res.cloudinary.com/dufh7rv0n/image/upload/v1617603243/uber_no3abg.jpg",
+      "https://images.unsplash.com/photo-1579667410546-f7079afa0601?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     status: "Complete",
-    technique: "HTML5, CSS3, Javscript, Reactjs",
+    technique: "HTML5, CSS3, Javscript",
     addition:
       "Context API, React-Boostrap, Material UI, Firebase Cloud Service",
-    webLink: "https://mellow-83a7f.web.app",
+    webLink: "https://cranky-perlman-507270.netlify.app/",
     type:"Basic"
   },
   {

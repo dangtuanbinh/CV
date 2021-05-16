@@ -20,10 +20,10 @@ const HomeIcon = () => {
           <a href="https://github.com/dangtuanbinh" className="homeIcon__link">
             <GitHubIcon />
           </a>
-          <a href="https://github.com/dangtuanbinh" className="homeIcon__link">
+          <a href="https://facebook.com/dang.robin.1" className="homeIcon__link">
             <FacebookIcon />
           </a>
-          <a href="https://github.com/dangtuanbinh" className="homeIcon__link">
+          <a href="https://www.instagram.com/dtbsauvage/" className="homeIcon__link">
             <InstagramIcon />
           </a>
         </Box>

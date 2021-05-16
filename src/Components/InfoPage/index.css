@@ -93,7 +93,7 @@
   width: 85px;
   height: 85px;
   border-radius: 999px;
-  background: url("https://res.cloudinary.com/dufh7rv0n/image/upload/v1617636365/profile_y5gpt6.jpg");
+  background: url("https://res.cloudinary.com/dufh7rv0n/image/upload/v1621064188/profile_w9elu2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,6 +166,9 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+.infoPage__footer__text>:focus, .infoPage__footer__text:hover{
+  text-decoration: none;
 }
 .infoPage__footer__text > span{
     color: var(--grey-color);
@@ -252,6 +255,11 @@
 @media screen and (max-width: 576px) {
   .infoPage__right__item--icon {
     left: -4.9%;
+  }
+  .infoPage__footer__text > span, .infoPage__footer__text > .MuiSvgIcon-root {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 22px;
   }
 }
 /* End of responsive */

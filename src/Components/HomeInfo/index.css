@@ -12,8 +12,19 @@
   display: flex;
   align-items: center;
 }
+.homeInfo__image {
+  position: relative;
+}
+.homeInfo__image__profilePic {
+  position: absolute;
+  top: 0%;
+  right: 30%;
+}
+.homeInfo__image__profilePic > img {
+  width: 370px;
+}
 .homeInfo__image > img {
-  width: 700px;
+  width: 800px;
 }
 .homeInfo__content {
   width: 100%;
@@ -27,6 +38,7 @@
   position: absolute;
   right: 16%;
   text-align: justify;
+  z-index: 1000;
 }
 .homeInfo__text > h1 {
   font-size: 7vw;
@@ -55,7 +67,8 @@
   border-radius: 14px;
   font-weight: 500;
 
-  background: linear-gradient(to right, white 50%, var(--primary-color) 50%) left;
+  background: linear-gradient(to right, white 50%, var(--primary-color) 50%)
+    left;
   background-size: 200%;
   transition: 0.5s ease-out;
 }
@@ -63,10 +76,8 @@
   color: white;
   background-position: right;
 }
-.homeInfo__image > img{
-  width: 800px;
-}
-.homeInfo__sideIcon{
+
+.homeInfo__sideIcon {
   display: none;
 }
 /* Responsive */
@@ -77,32 +88,32 @@
 }
 
 @media screen and (max-width: 768px) {
-  .homeInfo{
+  .homeInfo {
     padding-top: 10px;
   }
-  .homeInfo__sideIcon{
+  .homeInfo__sideIcon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
-  .homeInfo__bottomIcon{
+  .homeInfo__bottomIcon {
     display: none;
   }
-  .homeInfo__container{
-    align-items:unset;
+  .homeInfo__container {
+    align-items: unset;
   }
   .homeInfo__content {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding:0;
+    padding: 0;
   }
-  .homeInfo__image{
+  .homeInfo__image {
     margin-top: 45px;
   }
-  .homeInfo__image > img{
+  .homeInfo__image > img {
     width: 300px;
+    visibility: hidden;
   }
   .homeInfo__text {
     position: relative;
@@ -111,10 +122,10 @@
     flex-direction: column;
     align-items: center;
   }
-  .homeInfo__text{
+  .homeInfo__text {
     width: 100%;
   }
-  .homeInfo__link{
+  .homeInfo__link {
     display: none;
   }
   .homeInfo__text > h1 {
@@ -128,13 +139,19 @@
     font-size: 27px;
     font-weight: 100;
   }
-  
 }
 
 @media screen and (max-width: 576px) {
-  .homeInfo__container{
+  .homeInfo__container {
     height: 100%;
     width: 100%;
+  }
+  .homeInfo__image__profilePic {
+    top: -10%;
+    right: 10%;
+  }
+  .homeInfo__image__profilePic > img {
+    width: 280px;
   }
 }
 /* End of responsive */

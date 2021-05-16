@@ -9,12 +9,15 @@
     display: flex;
     align-items: center;
 }
+.header__drawer__link:hover{
+    text-decoration: none;
+}
 .header__drawer__link > .MuiSvgIcon-root{
     color: var(--lightGrey-color);
     font-size: 2rem;
     margin-right: 20px;
 }
-.header__drawer__link > h3{
+.header__drawer__link > span{
     font-size: 20px;
     color: var(--lightGrey-color);
 }
@@ -42,8 +45,9 @@
 .header__nav__link > .MuiSvgIcon-root:hover{
     color: var(--primary-color);
 }
-.activeLink > .MuiSvgIcon-root, .activeLink > h3{
+.activeLink > .MuiSvgIcon-root, .activeLink > span{
     color: var(--primary-color);
+    font-weight: 500;
 }
 .header__nav{
     position: absolute;

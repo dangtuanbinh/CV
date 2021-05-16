@@ -56,7 +56,7 @@ const Header = (anchor) => {
             to="/"
           >
             <HomeIcon />
-            <h3>Home</h3>
+            <span>Home</span>
           </NavLink>
         </ListItem>
         <ListItem button>
@@ -66,7 +66,7 @@ const Header = (anchor) => {
             to="/Project"
           >
             <AccountTreeIcon />
-            <h3>Portfolio</h3>
+            <span>Portfolio</span>
           </NavLink>
         </ListItem>
         <ListItem button>
@@ -76,7 +76,7 @@ const Header = (anchor) => {
             to="/Info"
           >
             <AccountCircleIcon />
-            <h3>About Me</h3>
+            <span>About Me</span>
           </NavLink>
         </ListItem>
         <ListItem button>
@@ -86,7 +86,7 @@ const Header = (anchor) => {
             to="/Contact"
           >
             <ContactlessIcon />
-            <h3>Contact</h3>
+            <span>Contact</span>
           </NavLink>
         </ListItem>
       </List>
